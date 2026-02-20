@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冒险模式 - 乐高故事书</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/adventure.css">
+</head>
+<body>
+    <div class="adventure-container">
+        <header class="adventure-header">
+            <div class="header-left">
+                <a href="/bookshelf" class="back-btn">← 退出</a>
+            </div>
+            <div class="header-center">
+                <h2 id="adventureTitle">冒险中...</h2>
+            </div>
+            <div class="header-right">
+                <div class="progress-indicator">
+                    <span id="chapterProgress">第 1 章</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="adventure-main">
+            <div class="story-panel" id="storyPanel">
+                <div class="story-text" id="storyText">
+                    <p>故事加载中...</p>
+                </div>
+                <div class="story-image" id="storyImage">
+                    <img src="" alt="">
+                </div>
+            </div>
+
+            <div class="interaction-panel" id="interactionPanel">
+                <div class="puzzle-container" id="puzzleContainer" style="display: none;">
+                    <div class="puzzle-header">
+                        <span class="puzzle-icon">🧩</span>
+                        <h3>解谜时间</h3>
+                    </div>
+                    <p class="puzzle-question" id="puzzleQuestion"></p>
+                    <div class="puzzle-options" id="puzzleOptions"></div>
+                    <div class="puzzle-hint" id="puzzleHint" style="display: none;">
+                        <p>提示：<span id="hintText"></span></p>
+                    </div>
+                </div>
+
+                <div class="choice-container" id="choiceContainer" style="display: none;">
+                    <div class="choice-header">
+                        <span class="choice-icon">🎯</span>
+                        <h3>选择你的行动</h3>
+                    </div>
+                    <div class="choice-options" id="choiceOptions"></div>
+                </div>
+
+                <div class="continue-container" id="continueContainer">
+                    <button class="btn btn-large btn-primary" id="continueBtn">继续</button>
+                </div>
+            </div>
+        </main>
+
+        <div class="adventure-footer">
+            <div class="character-avatar" id="characterAvatar">
+                <div class="avatar-placeholder">角色</div>
+            </div>
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-icon">⭐</span>
+                    <span class="stat-value" id="starsCount">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-icon">🧩</span>
+                    <span class="stat-value" id="puzzlesSolved">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="result-modal" id="resultModal" style="display: none;">
+        <div class="modal-content">
+            <div class="result-icon" id="resultIcon">✓</div>
+            <h3 id="resultTitle">回答正确！</h3>
+            <p id="resultMessage">太棒了，继续冒险吧！</p>
+            <button class="btn btn-primary" id="resultContinue">继续</button>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/adventure.js"></script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+.book-container {
+    min-height: 100vh;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background: white;
+    box-shadow: var(--shadow);
+}
+
+.header-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.book-main {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+    gap: 24px;
+}
+
+.book-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.book-cover-large {
+    width: 100%;
+    height: 200px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    margin-bottom: 16px;
+}
+
+.book-cover-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.book-meta {
+    background: white;
+    border-radius: var(--radius);
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.book-meta p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.chapters-list {
+    background: white;
+    border-radius: var(--radius);
+    padding: 16px;
+}
+
+.chapters-list h3 {
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.chapters-list ul {
+    list-style: none;
+}
+
+.chapters-list li {
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background 0.2s ease;
+    font-size: 14px;
+}
+
+.chapters-list li:hover {
+    background: var(--background-color);
+}
+
+.chapters-list li.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.chapters-list li.completed {
+    color: var(--success-color);
+}
+
+.book-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.chapter-display {
+    background: white;
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.chapter-header {
+    margin-bottom: 20px;
+}
+
+.chapter-header h2 {
+    font-size: 24px;
+}
+
+.chapter-content {
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.chapter-content p {
+    margin-bottom: 16px;
+}
+
+.placeholder-text {
+    color: var(--text-light);
+    text-align: center;
+    padding: 40px;
+}
+
+.chapter-image {
+    margin-top: 20px;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.chapter-image img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+}
+
+.puzzle-section {
+    margin-bottom: 24px;
+}
+
+.puzzle-card {
+    background: white;
+    border-radius: var(--radius);
+    padding: 24px;
+    border: 2px solid var(--accent-color);
+}
+
+.puzzle-card h3 {
+    margin-bottom: 16px;
+    color: var(--primary-color);
+}
+
+.puzzle-question {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.puzzle-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.puzzle-option {
+    padding: 16px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.puzzle-option:hover {
+    border-color: var(--primary-color);
+}
+
+.puzzle-option.selected {
+    border-color: var(--primary-color);
+    background: rgba(255, 107, 53, 0.05);
+}
+
+.puzzle-option.correct {
+    border-color: var(--success-color);
+    background: rgba(0, 184, 148, 0.1);
+}
+
+.puzzle-option.wrong {
+    border-color: var(--error-color);
+    background: rgba(231, 76, 60, 0.1);
+}
+
+.puzzle-result {
+    margin-top: 16px;
+    padding: 16px;
+    border-radius: var(--radius-sm);
+    text-align: center;
+}
+
+.puzzle-result.success {
+    background: rgba(0, 184, 148, 0.1);
+    color: var(--success-color);
+}
+
+.puzzle-result.error {
+    background: rgba(231, 76, 60, 0.1);
+    color: var(--error-color);
+}
+
+.chapter-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.share-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.share-modal .modal-content {
+    background: white;
+    border-radius: var(--radius);
+    padding: 24px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.share-result {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color);
+}
+
+.share-result input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+    background: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+}
+
+@media (max-width: 768px) {
+    .book-main {
+        flex-direction: column;
+    }
+    
+    .book-sidebar {
+        width: 100%;
+    }
+}

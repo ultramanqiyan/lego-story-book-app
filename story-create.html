@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创建故事 - 乐高故事书</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/story-create.css">
+</head>
+<body>
+    <div class="story-create-container">
+        <header class="page-header">
+            <a href="/" class="back-btn">← 返回</a>
+            <h1>创建新故事</h1>
+            <div class="header-actions">
+                <button id="saveDraft" class="btn btn-outline">保存草稿</button>
+            </div>
+        </header>
+
+        <main class="create-main">
+            <div class="progress-steps">
+                <div class="step active" data-step="1">
+                    <span class="step-number">1</span>
+                    <span class="step-label">选择角色</span>
+                </div>
+                <div class="step" data-step="2">
+                    <span class="step-number">2</span>
+                    <span class="step-label">选择主题</span>
+                </div>
+                <div class="step" data-step="3">
+                    <span class="step-number">3</span>
+                    <span class="step-label">设置情节</span>
+                </div>
+                <div class="step" data-step="4">
+                    <span class="step-number">4</span>
+                    <span class="step-label">生成故事</span>
+                </div>
+            </div>
+
+            <div class="step-content">
+                <section id="step1" class="step-panel active">
+                    <h2>选择故事角色</h2>
+                    <div class="character-selection">
+                        <div class="character-tabs">
+                            <button class="tab-btn active" data-tab="preset">预设角色</button>
+                            <button class="tab-btn" data-tab="custom">我的角色</button>
+                        </div>
+                        
+                        <div id="presetCharacters" class="character-grid">
+                            <div class="loading">加载中...</div>
+                        </div>
+                        
+                        <div id="customCharacters" class="character-grid" style="display: none;">
+                            <div class="create-new-card" onclick="window.location.href='/characters'">
+                                <span class="plus-icon">+</span>
+                                <span>创建新角色</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="selected-character" id="selectedCharacter" style="display: none;">
+                        <h3>已选择角色</h3>
+                        <div class="character-preview"></div>
+                    </div>
+                </section>
+
+                <section id="step2" class="step-panel">
+                    <h2>选择故事主题</h2>
+                    <div class="theme-selection">
+                        <div class="theme-grid">
+                            <div class="theme-option" data-theme="space">
+                                <div class="theme-icon">🚀</div>
+                                <span>太空探险</span>
+                                <p>在浩瀚宇宙中探索未知星球</p>
+                            </div>
+                            <div class="theme-option" data-theme="ocean">
+                                <div class="theme-icon">🌊</div>
+                                <span>海底世界</span>
+                                <p>潜入深海发现神秘宝藏</p>
+                            </div>
+                            <div class="theme-option" data-theme="forest">
+                                <div class="theme-icon">🌲</div>
+                                <span>森林奇遇</span>
+                                <p>在魔法森林中结识新朋友</p>
+                            </div>
+                            <div class="theme-option" data-theme="castle">
+                                <div class="theme-icon">🏰</div>
+                                <span>城堡传说</span>
+                                <p>探索古老城堡的秘密</p>
+                            </div>
+                            <div class="theme-option" data-theme="city">
+                                <div class="theme-icon">🏙️</div>
+                                <span>城市英雄</span>
+                                <p>成为城市的小小守护者</p>
+                            </div>
+                            <div class="theme-option" data-theme="dinosaur">
+                                <div class="theme-icon">🦕</div>
+                                <span>恐龙时代</span>
+                                <p>穿越时空与恐龙同行</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="step3" class="step-panel">
+                    <h2>设置故事情节</h2>
+                    <div class="plot-settings">
+                        <div class="form-group">
+                            <label for="bookTitle">故事标题</label>
+                            <input type="text" id="bookTitle" placeholder="给故事起个名字吧">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>故事长度</label>
+                            <div class="length-options">
+                                <label class="radio-option">
+                                    <input type="radio" name="length" value="short" checked>
+                                    <span>短篇（3-5章）</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="length" value="medium">
+                                    <span>中篇（6-10章）</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="length" value="long">
+                                    <span>长篇（11-15章）</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>难度等级</label>
+                            <div class="difficulty-options">
+                                <label class="radio-option">
+                                    <input type="radio" name="difficulty" value="easy" checked>
+                                    <span>简单</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="difficulty" value="medium">
+                                    <span>中等</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="difficulty" value="hard">
+                                    <span>困难</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="customPlot">自定义情节（可选）</label>
+                            <textarea id="customPlot" placeholder="描述你想要的故事情节，比如：主角在森林里遇到了一只迷路的小兔子..."></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="step4" class="step-panel">
+                    <h2>生成故事</h2>
+                    <div class="generate-preview">
+                        <div class="story-summary">
+                            <h3>故事预览</h3>
+                            <div class="summary-content">
+                                <p><strong>角色：</strong><span id="summaryCharacter">-</span></p>
+                                <p><strong>主题：</strong><span id="summaryTheme">-</span></p>
+                                <p><strong>标题：</strong><span id="summaryTitle">-</span></p>
+                                <p><strong>长度：</strong><span id="summaryLength">-</span></p>
+                            </div>
+                        </div>
+                        
+                        <div class="generate-action">
+                            <button id="generateBtn" class="btn btn-large btn-primary">
+                                开始生成故事
+                            </button>
+                        </div>
+                        
+                        <div class="generating-status" id="generatingStatus" style="display: none;">
+                            <div class="spinner"></div>
+                            <p>正在创作精彩故事，请稍候...</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="step-navigation">
+                <button id="prevBtn" class="btn btn-outline" disabled>上一步</button>
+                <button id="nextBtn" class="btn btn-primary">下一步</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/story-create.js"></script>
+</body>
+</html>

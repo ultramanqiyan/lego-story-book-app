@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>故事详情 - 乐高故事书</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/book.css">
+</head>
+<body>
+    <div class="book-container">
+        <header class="page-header">
+            <a href="/bookshelf" class="back-btn">← 返回书架</a>
+            <h1 id="bookTitle">故事详情</h1>
+            <div class="header-actions">
+                <button id="shareBtn" class="btn btn-outline">分享</button>
+                <button id="archiveBtn" class="btn btn-text">归档</button>
+            </div>
+        </header>
+
+        <main class="book-main">
+            <div class="book-sidebar">
+                <div class="book-cover-large">
+                    <img id="bookCover" src="" alt="">
+                </div>
+                <div class="book-meta">
+                    <p><strong>主题：</strong><span id="bookTheme">-</span></p>
+                    <p><strong>创建时间：</strong><span id="bookCreatedAt">-</span></p>
+                    <p><strong>阅读进度：</strong><span id="bookProgress">-</span></p>
+                </div>
+                
+                <div class="chapters-list">
+                    <h3>章节目录</h3>
+                    <ul id="chaptersList"></ul>
+                </div>
+            </div>
+
+            <div class="book-content">
+                <div class="chapter-display" id="chapterDisplay">
+                    <div class="chapter-header">
+                        <h2 id="chapterTitle">选择章节开始阅读</h2>
+                    </div>
+                    <div class="chapter-content" id="chapterContent">
+                        <p class="placeholder-text">从左侧选择章节开始阅读故事</p>
+                    </div>
+                    <div class="chapter-image" id="chapterImage" style="display: none;">
+                        <img src="" alt="章节配图">
+                    </div>
+                </div>
+
+                <div class="puzzle-section" id="puzzleSection" style="display: none;">
+                    <div class="puzzle-card">
+                        <h3>本章谜题</h3>
+                        <p class="puzzle-question" id="puzzleQuestion"></p>
+                        <div class="puzzle-options" id="puzzleOptions"></div>
+                        <div class="puzzle-result" id="puzzleResult" style="display: none;"></div>
+                    </div>
+                </div>
+
+                <div class="chapter-navigation">
+                    <button id="prevChapter" class="btn btn-outline" disabled>上一章</button>
+                    <button id="nextChapter" class="btn btn-primary" disabled>下一章</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="share-modal" id="shareModal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>分享故事</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="sharePassword">设置访问密码（可选）</label>
+                    <input type="text" id="sharePassword" placeholder="留空则无需密码">
+                </div>
+                <div class="form-group">
+                    <label for="shareExpiry">有效期</label>
+                    <select id="shareExpiry">
+                        <option value="7">7天</option>
+                        <option value="30">30天</option>
+                        <option value="0">永久</option>
+                    </select>
+                </div>
+                <div class="share-result" id="shareResult" style="display: none;">
+                    <p>分享链接：</p>
+                    <input type="text" id="shareLink" readonly>
+                    <button class="btn btn-outline" id="copyLink">复制链接</button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="createShare">创建分享</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/book.js"></script>
+</body>
+</html>

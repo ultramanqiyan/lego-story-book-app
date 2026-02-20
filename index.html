@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乐高故事书 - 让孩子成为故事的主角</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/home.css">
+</head>
+<body>
+    <div class="home-container">
+        <header class="home-header">
+            <div class="logo">
+                <img src="/static/images/logo.png" alt="乐高故事书" onerror="this.style.display='none'">
+                <h1>乐高故事书</h1>
+            </div>
+            <nav class="nav-links">
+                <a href="/login" class="btn btn-outline">登录</a>
+                <a href="/bookshelf" class="btn btn-primary">我的书架</a>
+            </nav>
+        </header>
+
+        <main class="hero-section">
+            <div class="hero-content">
+                <h2>让每个孩子成为故事的主角</h2>
+                <p>创建专属角色，生成独一无二的冒险故事，在互动中培养创造力</p>
+                <div class="hero-buttons">
+                    <a href="/story-create" class="btn btn-large btn-primary">开始创作</a>
+                    <a href="/characters" class="btn btn-large btn-outline">创建角色</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="lego-character-preview">
+                    <div class="lego-block block-1"></div>
+                    <div class="lego-block block-2"></div>
+                    <div class="lego-block block-3"></div>
+                </div>
+            </div>
+        </main>
+
+        <section class="features-section">
+            <h3>功能特色</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h4>自定义角色</h4>
+                    <p>选择发型、服装、配饰，打造专属乐高角色形象</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h4>AI故事生成</h4>
+                    <p>基于角色和情节选择，智能生成个性化冒险故事</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧩</div>
+                    <h4>互动解谜</h4>
+                    <p>故事中穿插趣味谜题，锻炼逻辑思维能力</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍👩‍👧</div>
+                    <h4>家长管控</h4>
+                    <p>时间管理、内容过滤，守护孩子健康阅读</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="themes-section">
+            <h3>故事主题</h3>
+            <div class="themes-carousel">
+                <div class="theme-card" data-theme="space">
+                    <div class="theme-preview space"></div>
+                    <span>太空探险</span>
+                </div>
+                <div class="theme-card" data-theme="ocean">
+                    <div class="theme-preview ocean"></div>
+                    <span>海底世界</span>
+                </div>
+                <div class="theme-card" data-theme="forest">
+                    <div class="theme-preview forest"></div>
+                    <span>森林奇遇</span>
+                </div>
+                <div class="theme-card" data-theme="castle">
+                    <div class="theme-preview castle"></div>
+                    <span>城堡传说</span>
+                </div>
+                <div class="theme-card" data-theme="city">
+                    <div class="theme-preview city"></div>
+                    <span>城市英雄</span>
+                </div>
+            </div>
+        </section>
+
+        <footer class="home-footer">
+            <p>&copy; 2024 乐高故事书 - 让想象力飞翔</p>
+        </footer>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/home.js"></script>
+</body>
+</html>

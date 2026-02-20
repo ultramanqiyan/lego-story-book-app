@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的书架 - 乐高故事书</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/bookshelf.css">
+</head>
+<body>
+    <div class="bookshelf-container">
+        <header class="page-header">
+            <a href="/" class="logo-link">
+                <h1>乐高故事书</h1>
+            </a>
+            <nav class="header-nav">
+                <a href="/story-create" class="btn btn-primary">创建新故事</a>
+                <a href="/characters" class="btn btn-outline">我的角色</a>
+                <a href="/parent" class="btn btn-outline">家长中心</a>
+                <button id="logoutBtn" class="btn btn-text">退出</button>
+            </nav>
+        </header>
+
+        <main class="bookshelf-main">
+            <div class="bookshelf-header">
+                <h2>我的书架</h2>
+                <div class="filter-tabs">
+                    <button class="tab-btn active" data-filter="all">全部</button>
+                    <button class="tab-btn" data-filter="reading">正在读</button>
+                    <button class="tab-btn" data-filter="completed">已完成</button>
+                    <button class="tab-btn" data-filter="archived">已归档</button>
+                </div>
+            </div>
+
+            <div class="books-grid" id="booksGrid">
+                <div class="loading">加载中...</div>
+            </div>
+
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <div class="empty-icon">📚</div>
+                <h3>书架空空如也</h3>
+                <p>还没有创建任何故事，快去创作第一个吧！</p>
+                <a href="/story-create" class="btn btn-primary">创建故事</a>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/bookshelf.js"></script>
+</body>
+</html>

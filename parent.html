@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家长中心 - 乐高故事书</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/parent.css">
+</head>
+<body>
+    <div class="parent-container">
+        <header class="page-header">
+            <a href="/" class="logo-link">
+                <h1>乐高故事书</h1>
+            </a>
+            <nav class="header-nav">
+                <a href="/bookshelf" class="btn btn-outline">我的书架</a>
+                <button id="exitParentMode" class="btn btn-text">退出家长模式</button>
+            </nav>
+        </header>
+
+        <main class="parent-main">
+            <div class="parent-login" id="parentLogin">
+                <div class="login-card">
+                    <h2>家长验证</h2>
+                    <p>请输入家长密码以进入家长中心</p>
+                    <form id="parentVerifyForm">
+                        <div class="form-group">
+                            <input type="password" id="parentPassword" placeholder="请输入家长密码" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">验证</button>
+                    </form>
+                    <p class="hint-text">首次使用？请先设置家长密码</p>
+                </div>
+            </div>
+
+            <div class="parent-dashboard" id="parentDashboard" style="display: none;">
+                <div class="dashboard-tabs">
+                    <button class="tab-btn active" data-tab="settings">设置</button>
+                    <button class="tab-btn" data-tab="usage">使用记录</button>
+                    <button class="tab-btn" data-tab="password">密码管理</button>
+                </div>
+
+                <section id="settingsTab" class="tab-panel active">
+                    <h3>家长控制设置</h3>
+                    
+                    <div class="settings-card">
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>每日使用时长限制</h4>
+                                <p>限制孩子每天使用应用的时间</p>
+                            </div>
+                            <div class="setting-control">
+                                <select id="dailyTimeLimit">
+                                    <option value="30">30分钟</option>
+                                    <option value="60" selected>1小时</option>
+                                    <option value="90">1.5小时</option>
+                                    <option value="120">2小时</option>
+                                    <option value="0">无限制</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>休息提醒间隔</h4>
+                                <p>每隔一段时间提醒孩子休息眼睛</p>
+                            </div>
+                            <div class="setting-control">
+                                <select id="restReminder">
+                                    <option value="15">15分钟</option>
+                                    <option value="30" selected>30分钟</option>
+                                    <option value="45">45分钟</option>
+                                    <option value="60">1小时</option>
+                                    <option value="0">关闭提醒</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>内容过滤级别</h4>
+                                <p>根据年龄过滤不适宜内容</p>
+                            </div>
+                            <div class="setting-control">
+                                <select id="contentFilter">
+                                    <option value="strict">严格（3-5岁）</option>
+                                    <option value="standard" selected>标准（6-8岁）</option>
+                                    <option value="moderate">宽松（9-12岁）</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" id="saveSettings">保存设置</button>
+                </section>
+
+                <section id="usageTab" class="tab-panel">
+                    <h3>使用记录</h3>
+                    
+                    <div class="usage-filters">
+                        <button class="filter-btn active" data-range="daily">今日</button>
+                        <button class="filter-btn" data-range="weekly">本周</button>
+                        <button class="filter-btn" data-range="monthly">本月</button>
+                    </div>
+
+                    <div class="usage-summary">
+                        <div class="summary-card">
+                            <span class="summary-label">总使用时长</span>
+                            <span class="summary-value" id="totalUsage">0分钟</span>
+                        </div>
+                        <div class="summary-card">
+                            <span class="summary-label">故事阅读数</span>
+                            <span class="summary-value" id="storiesRead">0本</span>
+                        </div>
+                        <div class="summary-card">
+                            <span class="summary-label">谜题解答数</span>
+                            <span class="summary-value" id="puzzlesSolved">0个</span>
+                        </div>
+                    </div>
+
+                    <div class="usage-chart">
+                        <canvas id="usageChart"></canvas>
+                    </div>
+
+                    <div class="usage-details">
+                        <h4>详细记录</h4>
+                        <ul id="usageList">
+                            <li class="loading">加载中...</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="passwordTab" class="tab-panel">
+                    <h3>密码管理</h3>
+                    
+                    <div class="password-card">
+                        <h4>设置家长密码</h4>
+                        <p>设置密码后，进入家长中心需要验证</p>
+                        <form id="setPasswordForm">
+                            <div class="form-group">
+                                <label for="newPassword">新密码</label>
+                                <input type="password" id="newPassword" placeholder="请输入新密码（至少4位）">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmNewPassword">确认密码</label>
+                                <input type="password" id="confirmNewPassword" placeholder="请再次输入密码">
+                            </div>
+                            <button type="submit" class="btn btn-primary">设置密码</button>
+                        </form>
+                    </div>
+
+                    <div class="password-card">
+                        <h4>修改家长密码</h4>
+                        <form id="changePasswordForm">
+                            <div class="form-group">
+                                <label for="currentPassword">当前密码</label>
+                                <input type="password" id="currentPassword" placeholder="请输入当前密码">
+                            </div>
+                            <div class="form-group">
+                                <label for="changeNewPassword">新密码</label>
+                                <input type="password" id="changeNewPassword" placeholder="请输入新密码">
+                            </div>
+                            <div class="form-group">
+                                <label for="changeConfirmPassword">确认新密码</label>
+                                <input type="password" id="changeConfirmPassword" placeholder="请再次输入新密码">
+                            </div>
+                            <button type="submit" class="btn btn-primary">修改密码</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/parent.js"></script>
+</body>
+</html>

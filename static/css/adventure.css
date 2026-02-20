@@ -1,0 +1,268 @@
+.adventure-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.adventure-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    background: white;
+    box-shadow: var(--shadow);
+}
+
+.header-left,
+.header-right {
+    flex: 1;
+}
+
+.header-center {
+    text-align: center;
+}
+
+.header-center h2 {
+    font-size: 18px;
+}
+
+.progress-indicator {
+    text-align: right;
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+.adventure-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px;
+    width: 100%;
+}
+
+.story-panel {
+    background: white;
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-bottom: 24px;
+    flex: 1;
+}
+
+.story-text {
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.story-text p {
+    margin-bottom: 16px;
+}
+
+.story-image {
+    margin-top: 20px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    text-align: center;
+}
+
+.story-image img {
+    max-width: 100%;
+    max-height: 300px;
+}
+
+.interaction-panel {
+    background: white;
+    border-radius: var(--radius);
+    padding: 24px;
+}
+
+.puzzle-container,
+.choice-container {
+    margin-bottom: 20px;
+}
+
+.puzzle-header,
+.choice-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.puzzle-icon,
+.choice-icon {
+    font-size: 24px;
+}
+
+.puzzle-header h3,
+.choice-header h3 {
+    color: var(--primary-color);
+}
+
+.puzzle-question {
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding: 16px;
+    background: var(--background-color);
+    border-radius: var(--radius-sm);
+}
+
+.puzzle-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.puzzle-option {
+    padding: 16px 20px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 16px;
+}
+
+.puzzle-option:hover {
+    border-color: var(--primary-color);
+    background: rgba(255, 107, 53, 0.05);
+}
+
+.puzzle-option.selected {
+    border-color: var(--primary-color);
+    background: var(--primary-color);
+    color: white;
+}
+
+.puzzle-option.correct {
+    border-color: var(--success-color);
+    background: var(--success-color);
+    color: white;
+}
+
+.puzzle-option.wrong {
+    border-color: var(--error-color);
+    background: var(--error-color);
+    color: white;
+}
+
+.puzzle-hint {
+    margin-top: 16px;
+    padding: 12px;
+    background: var(--accent-color);
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+}
+
+.choice-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.choice-option {
+    padding: 16px 20px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.choice-option:hover {
+    border-color: var(--primary-color);
+}
+
+.continue-container {
+    text-align: center;
+}
+
+.adventure-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background: white;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.character-avatar {
+    width: 50px;
+    height: 50px;
+    background: var(--background-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-placeholder {
+    font-size: 24px;
+}
+
+.stats-bar {
+    display: flex;
+    gap: 24px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stat-icon {
+    font-size: 20px;
+}
+
+.stat-value {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.result-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.result-modal .modal-content {
+    background: white;
+    border-radius: var(--radius);
+    padding: 40px;
+    text-align: center;
+    max-width: 300px;
+}
+
+.result-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--success-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    margin: 0 auto 20px;
+}
+
+.result-icon.wrong {
+    background: var(--error-color);
+}
+
+.result-modal h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.result-modal p {
+    color: var(--text-light);
+    margin-bottom: 24px;
+}

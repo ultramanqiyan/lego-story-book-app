@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的角色 - 乐高故事书</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/characters.css">
+</head>
+<body>
+    <div class="characters-container">
+        <header class="page-header">
+            <a href="/" class="logo-link">
+                <h1>乐高故事书</h1>
+            </a>
+            <nav class="header-nav">
+                <a href="/bookshelf" class="btn btn-outline">我的书架</a>
+                <a href="/story-create" class="btn btn-primary">创建故事</a>
+            </nav>
+        </header>
+
+        <main class="characters-main">
+            <div class="characters-header">
+                <h2>我的角色</h2>
+                <button id="createCharacterBtn" class="btn btn-primary">创建新角色</button>
+            </div>
+
+            <div class="characters-tabs">
+                <button class="tab-btn active" data-tab="custom">我的角色</button>
+                <button class="tab-btn" data-tab="preset">预设角色</button>
+            </div>
+
+            <div id="customCharacters" class="characters-grid">
+                <div class="loading">加载中...</div>
+            </div>
+
+            <div id="presetCharacters" class="characters-grid" style="display: none;">
+                <div class="loading">加载中...</div>
+            </div>
+        </main>
+    </div>
+
+    <div class="character-editor-modal" id="characterModal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">创建角色</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="editor-layout">
+                    <div class="character-preview-area">
+                        <div class="lego-character" id="characterPreview">
+                            <div class="character-head">
+                                <div class="hair"></div>
+                                <div class="face">
+                                    <div class="eyes"></div>
+                                    <div class="mouth"></div>
+                                </div>
+                            </div>
+                            <div class="character-body">
+                                <div class="torso"></div>
+                                <div class="arms">
+                                    <div class="arm left"></div>
+                                    <div class="arm right"></div>
+                                </div>
+                            </div>
+                            <div class="character-legs">
+                                <div class="leg left"></div>
+                                <div class="leg right"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="character-options">
+                        <div class="option-group">
+                            <label>角色名称</label>
+                            <input type="text" id="characterName" placeholder="给角色起个名字">
+                        </div>
+
+                        <div class="option-group">
+                            <label>发型</label>
+                            <div class="option-grid" id="hairOptions">
+                                <div class="option-item active" data-value="short">
+                                    <span>短发</span>
+                                </div>
+                                <div class="option-item" data-value="long">
+                                    <span>长发</span>
+                                </div>
+                                <div class="option-item" data-value="curly">
+                                    <span>卷发</span>
+                                </div>
+                                <div class="option-item" data-value="spiky">
+                                    <span>刺头</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="option-group">
+                            <label>发色</label>
+                            <div class="color-options" id="hairColorOptions">
+                                <div class="color-item active" data-color="brown" style="background: #8B4513;"></div>
+                                <div class="color-item" data-color="black" style="background: #000000;"></div>
+                                <div class="color-item" data-color="blonde" style="background: #FFD700;"></div>
+                                <div class="color-item" data-color="red" style="background: #CD5C5C;"></div>
+                            </div>
+                        </div>
+
+                        <div class="option-group">
+                            <label>肤色</label>
+                            <div class="color-options" id="skinColorOptions">
+                                <div class="color-item active" data-color="light" style="background: #FFDAB9;"></div>
+                                <div class="color-item" data-color="medium" style="background: #D2691E;"></div>
+                                <div class="color-item" data-color="dark" style="background: #8B4513;"></div>
+                            </div>
+                        </div>
+
+                        <div class="option-group">
+                            <label>服装</label>
+                            <div class="option-grid" id="outfitOptions">
+                                <div class="option-item active" data-value="casual">
+                                    <span>休闲装</span>
+                                </div>
+                                <div class="option-item" data-value="hero">
+                                    <span>英雄装</span>
+                                </div>
+                                <div class="option-item" data-value="explorer">
+                                    <span>探险装</span>
+                                </div>
+                                <div class="option-item" data-value="princess">
+                                    <span>公主装</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="option-group">
+                            <label>配饰</label>
+                            <div class="option-grid" id="accessoryOptions">
+                                <div class="option-item active" data-value="none">
+                                    <span>无</span>
+                                </div>
+                                <div class="option-item" data-value="glasses">
+                                    <span>眼镜</span>
+                                </div>
+                                <div class="option-item" data-value="hat">
+                                    <span>帽子</span>
+                                </div>
+                                <div class="option-item" data-value="cape">
+                                    <span>披风</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" id="cancelEdit">取消</button>
+                <button class="btn btn-primary" id="saveCharacter">保存角色</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/characters.js"></script>
+</body>
+</html>
