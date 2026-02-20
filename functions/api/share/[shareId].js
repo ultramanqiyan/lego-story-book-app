@@ -22,12 +22,14 @@ export async function onRequestGet(context) {
                 status: 410,
                 headers: { 'Content-Type': 'application/json' }
             });
+        }
         
         if (share.expires_at && new Date(share.expires_at) < new Date()) {
             return new Response(JSON.stringify({ error: '分享已过期' }), {
                 status: 410,
                 headers: { 'Content-Type': 'application/json' }
             });
+        }
         
         const url = new URL(request.url);
         const password = url.searchParams.get('password');
