@@ -1,0 +1,94 @@
+[
+  {
+    "character_id": "char_mlvk18bk69v9ve695",
+    "name": "小明",
+    "is_preset": true,
+    "avatar_emoji": "👦",
+    "personality": "勇敢、好奇",
+    "description": "一个勇敢的小男孩，喜欢冒险"
+  },
+  {
+    "character_id": "char_mlvk18bkqvixtj1ak",
+    "name": "小红",
+    "is_preset": true,
+    "avatar_emoji": "👧",
+    "personality": "聪明、善良",
+    "description": "一个聪明的小女孩，喜欢帮助别人"
+  },
+  {
+    "character_id": "char_mlvk18bke0z6q6v2m",
+    "name": "小强",
+    "is_preset": true,
+    "avatar_emoji": "🧒",
+    "personality": "强壮、忠诚",
+    "description": "一个强壮的小男孩，是可靠的朋友"
+  },
+  {
+    "character_id": "char_mlvk18bk8fi30o7zv",
+    "name": "小美",
+    "is_preset": true,
+    "avatar_emoji": "👩",
+    "personality": "优雅、有创意",
+    "description": "一个优雅的小女孩，喜欢艺术"
+  },
+  {
+    "character_id": "char_mlvk18bknw6gc52x4",
+    "name": "小智",
+    "is_preset": true,
+    "avatar_emoji": "🧑",
+    "personality": "智慧、冷静",
+    "description": "一个聪明的小孩，善于解决问题"
+  },
+  {
+    "character_id": "char_mlvk18bk2nobjw0na",
+    "name": "小勇",
+    "is_preset": true,
+    "avatar_emoji": "👦",
+    "personality": "冒险、热情",
+    "description": "一个充满活力的小男孩"
+  },
+  {
+    "character_id": "char_mlvk18e0ye2301zjc",
+    "user_id": "user_test_001",
+    "name": "更新后人仔",
+    "is_preset": false,
+    "personality": "勇敢、正义",
+    "created_at": 1771632140472
+  },
+  {
+    "character_id": "char_mlvk18hh2s89ju3o7",
+    "user_id": "user_mlvk18hgjgj2233a3",
+    "name": "小勇士",
+    "is_preset": false,
+    "personality": "勇敢、正义",
+    "appearance": {
+      "hair": "black",
+      "outfit": "hero"
+    },
+    "created_at": 1771632140597
+  },
+  {
+    "character_id": "char_mlvk1dmzmgkt40hz9",
+    "user_id": "user_mlvk1dmhbmsfzibzi",
+    "name": "测试角色",
+    "appearance": {
+      "hair": "black",
+      "outfit": "hero"
+    },
+    "personality": "勇敢、善良",
+    "is_preset": false,
+    "created_at": 1771632147275
+  },
+  {
+    "character_id": "char_mlvke2kyrhyrsbuxt",
+    "user_id": "user_mlvke2khbhg967fc7",
+    "name": "测试角色",
+    "appearance": {
+      "hair": "black",
+      "outfit": "hero"
+    },
+    "personality": "勇敢、善良",
+    "is_preset": false,
+    "created_at": 1771632739474
+  }
+]

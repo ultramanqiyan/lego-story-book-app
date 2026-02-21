@@ -1,0 +1,35 @@
+[
+  {
+    "puzzle_id": "puz_mlvk18g39haotuyb5",
+    "chapter_id": "test_chapter",
+    "question": "1+1等于多少？",
+    "options": "[\"1\",\"2\",\"3\",\"4\"]",
+    "correct_index": 1,
+    "hint": "想想加法",
+    "type": "calculation"
+  },
+  {
+    "puzzle_id": "puz_mlvk18hah8wmoz4m1",
+    "chapter_id": "chap_mlvk18h9v5fnt0de9",
+    "question": "火箭发射时，倒计时从几开始？",
+    "options": "[\"5\",\"10\",\"3\",\"1\"]",
+    "correct_index": 1,
+    "type": "common"
+  },
+  {
+    "puzzle_id": "puz_mlvk18i7id4585ht9",
+    "chapter_id": "chap_mlvk18i6ur8cbbtah",
+    "question": "第1章谜题：1+1=?",
+    "options": "[\"1\",\"2\",\"3\",\"2\"]",
+    "correct_index": 1,
+    "type": "calculation"
+  },
+  {
+    "puzzle_id": "puz_mlvk18i98o086d9ps",
+    "chapter_id": "chap_mlvk18i87lckg4lqd",
+    "question": "第2章谜题：1+2=?",
+    "options": "[\"1\",\"2\",\"3\",\"3\"]",
+    "correct_index": 2,
+    "type": "calculation"
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "record_id": "rec_mlvk18g7qmypu9x41",
+    "puzzle_id": "puz_mlvk18g39haotuyb5",
+    "user_id": "user_test_001",
+    "attempts": 3,
+    "is_correct": false,
+    "created_at": 1771632140551
+  },
+  {
+    "record_id": "rec_mlvk18hdoq70tw8sa",
+    "puzzle_id": "puz_mlvk18hah8wmoz4m1",
+    "user_id": "user_mlvk18h7upyq7kchf",
+    "answer_index": 1,
+    "is_correct": true,
+    "answered_at": 1771632140593
+  },
+  {
+    "record_id": "rec_mlvk18ibavon6up7i",
+    "puzzle_id": "puz_mlvk18i7id4585ht9",
+    "user_id": "user_mlvk18i4y80xpfh7h",
+    "answer_index": 1,
+    "is_correct": true,
+    "answered_at": 1771632140627
+  },
+  {
+    "record_id": "rec_mlvk18icixyp8l0lh",
+    "puzzle_id": "puz_mlvk18i98o086d9ps",
+    "user_id": "user_mlvk18i4y80xpfh7h",
+    "answer_index": 2,
+    "is_correct": true,
+    "answered_at": 1771632140628
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "log_id": "log_mlvk18gyet1ue8y0x",
+    "user_id": "user_test_001",
+    "action_type": "read_story",
+    "duration": 30,
+    "created_at": 1771632140578
+  },
+  {
+    "log_id": "log_mlvk18hrzqpx7du5h",
+    "user_id": "user_mlvk18hplu0dqf0uu",
+    "action_type": "read_story",
+    "duration": 15,
+    "created_at": 1771632140607
+  },
+  {
+    "log_id": "log_mlvk18hrd91w55mxh",
+    "user_id": "user_mlvk18hplu0dqf0uu",
+    "action_type": "read_story",
+    "duration": 15,
+    "created_at": 1771628540607
+  },
+  {
+    "log_id": "log_mlvk18hsmnbsse1rj",
+    "user_id": "user_mlvk18hplu0dqf0uu",
+    "action_type": "read_story",
+    "duration": 15,
+    "created_at": 1771624940608
+  }
+]

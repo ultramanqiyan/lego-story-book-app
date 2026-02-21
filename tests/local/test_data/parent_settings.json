@@ -1,0 +1,35 @@
+[
+  {
+    "setting_id": "set_mlvk18gqjaxek55su",
+    "user_id": "user_test_001",
+    "daily_time_limit": 90,
+    "rest_reminder_interval": 30,
+    "content_filter_level": "standard",
+    "is_parent_mode": false,
+    "created_at": 1771632140570
+  },
+  {
+    "setting_id": "set_mlvk18hqqfuoi0dpu",
+    "user_id": "user_mlvk18hplu0dqf0uu",
+    "daily_time_limit": 90,
+    "rest_reminder_interval": 20,
+    "content_filter_level": "strict",
+    "parent_password": "parent123",
+    "is_parent_mode": false,
+    "created_at": 1771632140606
+  },
+  {
+    "setting_id": "set_mlvk1dnqm3nfuhs7t",
+    "user_id": "user_mlvk1dmhbmsfzibzi",
+    "daily_time_limit": 90,
+    "rest_reminder_interval": 20,
+    "content_filter_level": "strict"
+  },
+  {
+    "setting_id": "set_mlvke2lrsiw4s4aa9",
+    "user_id": "user_mlvke2khbhg967fc7",
+    "daily_time_limit": 90,
+    "rest_reminder_interval": 20,
+    "content_filter_level": "strict"
+  }
+]

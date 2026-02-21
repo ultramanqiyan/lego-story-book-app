@@ -1,0 +1,172 @@
+{
+  "total": 33,
+  "passed": 32,
+  "failed": 1,
+  "tests": [
+    {
+      "name": "文件非空: app.js",
+      "status": "passed",
+      "message": "106行"
+    },
+    {
+      "name": "文件非空: auth.js",
+      "status": "passed",
+      "message": "72行"
+    },
+    {
+      "name": "文件非空: bookshelf.js",
+      "status": "passed",
+      "message": "100行"
+    },
+    {
+      "name": "文件非空: characters.js",
+      "status": "passed",
+      "message": "251行"
+    },
+    {
+      "name": "文件非空: story-create.js",
+      "status": "passed",
+      "message": "226行"
+    },
+    {
+      "name": "文件非空: book.js",
+      "status": "passed",
+      "message": "215行"
+    },
+    {
+      "name": "文件非空: parent.js",
+      "status": "passed",
+      "message": "79行"
+    },
+    {
+      "name": "文件非空: home.js",
+      "status": "passed",
+      "message": "12行"
+    },
+    {
+      "name": "文件非空: adventure.js",
+      "status": "passed",
+      "message": "147行"
+    },
+    {
+      "name": "文件非空: share-view.js",
+      "status": "passed",
+      "message": "68行"
+    },
+    {
+      "name": "函数定义: App核心方法",
+      "status": "failed",
+      "message": "缺少: App.isAuthenticated, App.api, App.checkAuth, App.showToast"
+    },
+    {
+      "name": "函数定义: 认证事件绑定",
+      "status": "passed",
+      "message": "所有必需函数已定义"
+    },
+    {
+      "name": "函数定义: 书架页面函数",
+      "status": "passed",
+      "message": "所有必需函数已定义"
+    },
+    {
+      "name": "函数定义: 角色管理函数",
+      "status": "passed",
+      "message": "所有必需函数已定义"
+    },
+    {
+      "name": "函数定义: 故事创建函数",
+      "status": "passed",
+      "message": "所有必需函数已定义"
+    },
+    {
+      "name": "函数定义: 书籍详情函数",
+      "status": "passed",
+      "message": "所有必需函数已定义"
+    },
+    {
+      "name": "函数定义: 冒险模式函数",
+      "status": "passed",
+      "message": "所有必需函数已定义"
+    },
+    {
+      "name": "API调用: 登录API",
+      "status": "passed",
+      "message": "正确调用 /api/auth/login"
+    },
+    {
+      "name": "API调用: 书籍列表API",
+      "status": "passed",
+      "message": "正确调用 /api/books"
+    },
+    {
+      "name": "API调用: 角色API",
+      "status": "passed",
+      "message": "正确调用 /api/characters"
+    },
+    {
+      "name": "API调用: 故事生成API",
+      "status": "passed",
+      "message": "正确调用 /api/story/generate"
+    },
+    {
+      "name": "API调用: 书籍详情API",
+      "status": "passed",
+      "message": "正确调用 /api/books/"
+    },
+    {
+      "name": "API调用: 家长控制API",
+      "status": "passed",
+      "message": "正确调用 /api/parent"
+    },
+    {
+      "name": "事件绑定: app.js",
+      "status": "passed",
+      "message": "包含DOMContentLoaded事件"
+    },
+    {
+      "name": "事件绑定: auth.js",
+      "status": "passed",
+      "message": "包含DOMContentLoaded事件"
+    },
+    {
+      "name": "事件绑定: bookshelf.js",
+      "status": "passed",
+      "message": "包含DOMContentLoaded事件"
+    },
+    {
+      "name": "事件绑定: characters.js",
+      "status": "passed",
+      "message": "包含DOMContentLoaded事件"
+    },
+    {
+      "name": "事件绑定: story-create.js",
+      "status": "passed",
+      "message": "包含DOMContentLoaded事件"
+    },
+    {
+      "name": "事件绑定: book.js",
+      "status": "passed",
+      "message": "包含DOMContentLoaded事件"
+    },
+    {
+      "name": "事件绑定: parent.js",
+      "status": "passed",
+      "message": "包含DOMContentLoaded事件"
+    },
+    {
+      "name": "事件绑定: home.js",
+      "status": "passed",
+      "message": "包含DOMContentLoaded事件"
+    },
+    {
+      "name": "事件绑定: adventure.js",
+      "status": "passed",
+      "message": "包含DOMContentLoaded事件"
+    },
+    {
+      "name": "事件绑定: share-view.js",
+      "status": "passed",
+      "message": "包含DOMContentLoaded事件"
+    }
+  ]
+}

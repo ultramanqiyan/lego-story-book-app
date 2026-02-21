@@ -1,0 +1,73 @@
+[
+  {
+    "user_id": "user_mlvk18co4cebc9a5a",
+    "username": "testuser",
+    "password_hash": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+    "nickname": "测试用户",
+    "age_range": "6-8",
+    "created_at": 1771632140424
+  },
+  {
+    "user_id": "user_mlvk18dgl3ohyt6c1",
+    "username": "newuser",
+    "password_hash": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+    "nickname": "新用户",
+    "created_at": 1771632140452
+  },
+  {
+    "user_id": "user_mlvk18h19zrg07043",
+    "username": "integration_user",
+    "password_hash": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+    "nickname": "集成测试用户",
+    "created_at": 1771632140581
+  },
+  {
+    "user_id": "user_mlvk18h7upyq7kchf",
+    "username": "path_user_1",
+    "password_hash": "ecd71870d1963316a97e3ac3408c9835ad8cf0f3c1bc703527c30265534f75ae",
+    "nickname": "路径测试用户1",
+    "age_range": "6-8",
+    "created_at": 1771632140587
+  },
+  {
+    "user_id": "user_mlvk18hgjgj2233a3",
+    "username": "path_user_2",
+    "password_hash": "ecd71870d1963316a97e3ac3408c9835ad8cf0f3c1bc703527c30265534f75ae",
+    "created_at": 1771632140596
+  },
+  {
+    "user_id": "user_mlvk18hplu0dqf0uu",
+    "username": "child_user",
+    "password_hash": "12d657148955f3c7dade808a5bd9a6a8d6272016dc59f8084c5ac23549242330",
+    "age_range": "6-8",
+    "created_at": 1771632140605
+  },
+  {
+    "user_id": "user_mlvk18hvw1gmo56rw",
+    "username": "book_manager",
+    "password_hash": "ecd71870d1963316a97e3ac3408c9835ad8cf0f3c1bc703527c30265534f75ae",
+    "created_at": 1771632140611
+  },
+  {
+    "user_id": "user_mlvk18i4y80xpfh7h",
+    "username": "reader_user",
+    "password_hash": "ecd71870d1963316a97e3ac3408c9835ad8cf0f3c1bc703527c30265534f75ae",
+    "created_at": 1771632140621
+  },
+  {
+    "user_id": "user_mlvk1dmhbmsfzibzi",
+    "username": "testuser_1771632147250",
+    "password_hash": "85777f270ad7cf2a790981bbae3c4e484a1dc55e24a77390d692fbf1cffa12fa",
+    "nickname": "测试用户",
+    "age_range": "6-8",
+    "created_at": 1771632147259
+  },
+  {
+    "user_id": "user_mlvke2khbhg967fc7",
+    "username": "testuser_1771632739453",
+    "password_hash": "85777f270ad7cf2a790981bbae3c4e484a1dc55e24a77390d692fbf1cffa12fa",
+    "nickname": "测试用户",
+    "age_range": "6-8",
+    "created_at": 1771632739457
+  }
+]

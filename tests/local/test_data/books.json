@@ -1,0 +1,116 @@
+[
+  {
+    "book_id": "book_mlvk18fk52a4fcnhr",
+    "user_id": "user_test_001",
+    "title": "更新后书籍",
+    "theme": "space",
+    "is_archived": false,
+    "is_completed": false,
+    "total_chapters": 0,
+    "created_at": 1771632140528
+  },
+  {
+    "book_id": "book_mlvk18h2lkzywkm2r",
+    "user_id": "user_mlvk18h19zrg07043",
+    "title": "集成测试书籍",
+    "theme": "space",
+    "is_archived": false,
+    "total_chapters": 0,
+    "created_at": 1771632140582
+  },
+  {
+    "book_id": "book_mlvk18h8uuik0djt9",
+    "user_id": "user_mlvk18h7upyq7kchf",
+    "title": "太空冒险",
+    "theme": "space",
+    "is_archived": false,
+    "is_completed": false,
+    "total_chapters": 3,
+    "read_chapters": 1,
+    "created_at": 1771632140588
+  },
+  {
+    "book_id": "book_mlvk18hkiebbjmrh8",
+    "user_id": "user_mlvk18hgjgj2233a3",
+    "title": "勇士传说",
+    "theme": "castle",
+    "is_archived": false,
+    "total_chapters": 1,
+    "created_at": 1771632140600
+  },
+  {
+    "book_id": "book_mlvk18hwp4u60jp3a",
+    "user_id": "user_mlvk18hvw1gmo56rw",
+    "title": "故事书1",
+    "theme": "space",
+    "is_archived": false,
+    "total_chapters": 5,
+    "created_at": 1771632140612
+  },
+  {
+    "book_id": "book_mlvk18hxyz5uopjm3",
+    "user_id": "user_mlvk18hvw1gmo56rw",
+    "title": "故事书2",
+    "theme": "ocean",
+    "is_archived": false,
+    "total_chapters": 5,
+    "created_at": 1771632140613
+  },
+  {
+    "book_id": "book_mlvk18i54ezal3806",
+    "user_id": "user_mlvk18i4y80xpfh7h",
+    "title": "海洋探险",
+    "theme": "ocean",
+    "is_archived": false,
+    "is_completed": true,
+    "total_chapters": 2,
+    "read_chapters": 2,
+    "created_at": 1771632140621
+  },
+  {
+    "book_id": "book_mlvk1dn71t1rmvoop",
+    "user_id": "user_mlvk1dmhbmsfzibzi",
+    "title": "测试书籍",
+    "theme": "space",
+    "age_range": "6-8",
+    "is_archived": false,
+    "is_completed": false,
+    "total_chapters": 0,
+    "read_chapters": 0,
+    "created_at": 1771632147283
+  },
+  {
+    "book_id": "book_mlvk1dnf8lhm4ik4p",
+    "user_id": "user_mlvk1dmhbmsfzibzi",
+    "title": "太空冒险",
+    "theme": "space",
+    "is_archived": false,
+    "is_completed": false,
+    "total_chapters": 3,
+    "read_chapters": 0,
+    "created_at": 1771632147291
+  },
+  {
+    "book_id": "book_mlvke2l8o2cb78rzb",
+    "user_id": "user_mlvke2khbhg967fc7",
+    "title": "测试书籍",
+    "theme": "space",
+    "age_range": "6-8",
+    "is_archived": false,
+    "is_completed": false,
+    "total_chapters": 0,
+    "read_chapters": 0,
+    "created_at": 1771632739484
+  },
+  {
+    "book_id": "book_mlvke2lgz2us2c6ls",
+    "user_id": "user_mlvke2khbhg967fc7",
+    "title": "太空冒险",
+    "theme": "space",
+    "is_archived": false,
+    "is_completed": false,
+    "total_chapters": 3,
+    "read_chapters": 0,
+    "created_at": 1771632739492
+  }
+]

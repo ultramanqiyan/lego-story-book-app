@@ -1,0 +1,29 @@
+[
+  {
+    "share_id": "share_mlvk18gfmrhqr16ea",
+    "book_id": "book_mlvk18fk52a4fcnhr",
+    "user_id": "user_test_001",
+    "password": null,
+    "is_active": false,
+    "view_count": 1,
+    "created_at": 1771632140559
+  },
+  {
+    "share_id": "share_mlvk18ghz19vf42yz",
+    "book_id": "book_mlvk18fk52a4fcnhr",
+    "user_id": "user_test_001",
+    "password": "1234",
+    "is_active": true,
+    "view_count": 0,
+    "created_at": 1771632140561
+  },
+  {
+    "share_id": "share_mlvk18hlwdzi8y1t7",
+    "book_id": "book_mlvk18hkiebbjmrh8",
+    "user_id": "user_mlvk18hgjgj2233a3",
+    "password": "1234",
+    "is_active": true,
+    "view_count": 1,
+    "created_at": 1771632140601
+  }
+]
